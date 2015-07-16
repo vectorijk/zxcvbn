@@ -44,13 +44,13 @@ public class PasswordEditText extends AppCompatEditText {
     protected void onDraw(@NonNull Canvas canvas) {
         int startX = getScrollX();
         int endX = getWidth();
-        int lineStartY = getScrollY() + getHeight() - getPaddingBottom();
+        int lineStartY = getScrollY() + getHeight();
 
         getPaint().setAlpha(255);
         paint.setColor(Color.RED);
-//        textPaint.setColor(Color.RED);
-//        canvas.drawText("draw Text", startX, endX, textPaint);
-        canvas.drawRect(startX, lineStartY, endX, lineStartY + dp2px(getContext(),1), paint);
+        textPaint.setColor(Color.RED);
+        canvas.drawText("draw Text", startX, endX, textPaint);
+        canvas.drawRect(startX, lineStartY - dp2px(getContext(),2), endX, lineStartY , paint);
         super.onDraw(canvas);
     }
 }
