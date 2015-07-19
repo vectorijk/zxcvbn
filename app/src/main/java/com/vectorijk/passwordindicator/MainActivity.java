@@ -54,8 +54,7 @@ public class MainActivity extends ActionBarActivity {
 
     public class MyPagerAdapter extends FragmentPagerAdapter {
 
-        private final String[] TITLES = {"Categories", "Home", "Top Paid", "Top Free", "Top Grossing", "Top New Paid",
-                "Top New Free", "Trending"};
+        private final String[] TITLES = {"Example 1", "Example 2"};
 
         public MyPagerAdapter(FragmentManager fm) {
             super(fm);
@@ -74,7 +73,7 @@ public class MainActivity extends ActionBarActivity {
         @Override
         public Fragment getItem(int position) {
             //fixme
-            return SuperAwesomeCardFragment.newInstance(position);
+//            return SuperAwesomeCardFragment.newInstance(position);
         }
     }
 }
